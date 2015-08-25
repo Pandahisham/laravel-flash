@@ -1,0 +1,21 @@
+{
+    "name": "tshafer/laravel-flash",
+    "description": "Flash messages for Laravel 5.",
+    "require": {
+        "php": ">=5.5.9",
+        "draperstudio/laravel-service-provider": "1.0.*@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tshafer\\Flash\\": "src/"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
