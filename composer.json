@@ -3,7 +3,7 @@
     "description": "Flash messages for Laravel 5.",
     "require": {
         "php": ">=5.5.9",
-        "tshafer/laravel-service-provider": "dev-master"
+        "tshafer/laravel-service-provider": "1.*"
     },
     "autoload": {
         "psr-4": {
@@ -15,7 +15,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0.x-dev"
+            "dev-master": "1.*"
         }
     }
 }
