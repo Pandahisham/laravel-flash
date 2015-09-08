@@ -1,29 +1,11 @@
 # Laravel Flash
 
-## Intro
-
-This package is a fork of the [Flash Package](https://github.com/laracasts/flash) built by [Jeffrey Way](https://github.com/JeffreyWay) at [Laracasts](https://laracasts.com/lessons/flexible-flash-messages).
-
-## New Features
-
-- Display Laravel Validator Messages
-- Display Multiple Messages
-- Display Titles in Alerts
-- Configuration to choose a template
-    - Twitter Bootstrap 3 (Default)
-    - ZURB Foundation
-        - Default
-        - Radius
-        - Round
-- Method Chaining
-- Cleaned with [PHP-CS-Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer)
-
 ## Installation
 
 First, pull in the package through Composer.
 
-```js
-composer require draperstudio/laravel-flash:1.0.*@dev
+```php
+composer require tshafer/laravel-flash:1.*
 ```
 
 And then include the service provider within `app/config/app.php`.

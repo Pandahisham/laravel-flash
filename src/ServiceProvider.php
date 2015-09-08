@@ -37,6 +37,10 @@
             $this->app->singleton( 'flash', function () {
                 return $this->app->make( FlashNotifier::class );
             } );
+
+            $loader = \Illuminate\Foundation\AliasLoader::getInstance();
+
+            $loader->alias( 'Flash', \Tshafer\Flash\FlashFacade::class );
         }
 
         /**
