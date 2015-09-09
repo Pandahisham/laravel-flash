@@ -28,3 +28,15 @@
         @endif
     @endforeach
 @endif
+
+
+@if($errors->count() && !session()->has('flash_notification.messages'))
+    <div data-alert class="alert-box {{ $styleClass or '' }}">
+        <strong>Whoops!</strong> There were some problems with your input.<br><br>
+        <ul>
+            @foreach($errors->all('<li>:message</li>') as $error)
+                {!! $error !!}
+            @endforeach
+        </ul>
+    </div>
+@endif
