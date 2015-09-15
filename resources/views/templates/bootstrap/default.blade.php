@@ -41,4 +41,10 @@
     </div>
 @endif
 
+@if(session()->has('status') && !session()->has('flash_notification.messages'))
+    <div class="alert alert-success }} alert-dismissible">
+           {{ session('status') }}
+    </div>
+@endif
+
 
