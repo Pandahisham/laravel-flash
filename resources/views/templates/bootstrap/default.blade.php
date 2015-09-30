@@ -1,5 +1,5 @@
 @if (session()->has('flash_notification.messages'))
-    @foreach (session()->pull('flash_notification.messages') as $message)
+    @foreach (session()->get('flash_notification.messages') as $message)
         @if ($message['overlay'])
             @include('flash::templates.bootstrap.modal', [
                 'modalClass' => 'flash-modal',

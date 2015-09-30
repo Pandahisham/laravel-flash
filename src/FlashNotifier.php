@@ -21,6 +21,14 @@ class FlashNotifier
      */
     public function __construct(Store $session)
     {
+        if ($session->has('flash_notification.messages')) {
+            $session->forget('flash_notification.messages');
+        }
+
+        if ($session->has('flash_notification.important')) {
+            $session->forget('flash_notification.important');
+        }
+
         $this->session = $session;
     }
 
@@ -112,9 +120,10 @@ class FlashNotifier
      */
     public function message($message, $level = 'info', $title = 'Notice', $overlay = false)
     {
-        $this->session->flash('flash_notification.messages', [
-          compact('message', 'level', 'title', 'overlay'),
+        $this->session->flash('flash_notification.messages',[
+          compact('message', 'level', 'title', 'overlay')
         ]);
+
 
         return $this;
     }
