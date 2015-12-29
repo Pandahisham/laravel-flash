@@ -5,19 +5,6 @@
         "php": ">=5.5.9",
         "tshafer/laravel-service-provider": "1.*"
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "http://toran.tjshafer.com/repo/private/"
-        },
-        {
-            "type": "composer",
-            "url": "http://toran.tjshafer.com/repo/packagist/"
-        },
-        {
-            "packagist": false
-        }
-    ],
     "autoload": {
         "psr-4": {
             "Tshafer\\Flash\\": "src/"
@@ -25,10 +12,5 @@
         "files": [
             "src/functions.php"
         ]
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.*"
-        }
     }
 }
