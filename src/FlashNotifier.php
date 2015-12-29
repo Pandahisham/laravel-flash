@@ -6,7 +6,6 @@ use Illuminate\Session\Store;
 
 class FlashNotifier
 {
-
     /**
      * The session writer.
      *
@@ -120,10 +119,9 @@ class FlashNotifier
      */
     public function message($message, $level = 'info', $title = 'Notice', $overlay = false)
     {
-        $this->session->flash('flash_notification.messages',[
-          compact('message', 'level', 'title', 'overlay')
+        $this->session->flash('flash_notification.messages', [
+          compact('message', 'level', 'title', 'overlay'),
         ]);
-
 
         return $this;
     }
