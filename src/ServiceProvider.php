@@ -1,17 +1,14 @@
 <?php
 
-    namespace Tshafer\Flash;
+namespace Tshafer\Flash;
 
-    use Tshafer\ServiceProvider\ServiceProvider as BaseProvider;
+use Tshafer\ServiceProvider\ServiceProvider as BaseProvider;
 
     /**
-     * Class ServiceProvider
-     *
-     * @package Tshafer\Flash
+     * Class ServiceProvider.
      */
     class ServiceProvider extends BaseProvider
     {
-
         /**
          * @var string
          */
@@ -22,11 +19,11 @@
          */
         public function boot()
         {
-            $this->setup( __DIR__ )
+            $this->setup(__DIR__)
                  ->publishConfig()
                  ->publishViews()
                  ->loadViews()
-                 ->mergeConfig( 'flash' );
+                 ->mergeConfig('flash');
         }
 
         /**
@@ -34,13 +31,13 @@
          */
         public function register()
         {
-            $this->app->singleton( 'flash', function () {
-                return $this->app->make( FlashNotifier::class );
-            } );
+            $this->app->singleton('flash', function () {
+                return $this->app->make(FlashNotifier::class);
+            });
 
             $loader = \Illuminate\Foundation\AliasLoader::getInstance();
 
-            $loader->alias( 'Flash', \Tshafer\Flash\FlashFacade::class );
+            $loader->alias('Flash', \Tshafer\Flash\FlashFacade::class);
         }
 
         /**
@@ -48,6 +45,6 @@
          */
         public function provides()
         {
-            return [ 'flash' ];
+            return ['flash'];
         }
     }
