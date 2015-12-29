@@ -1,6 +1,7 @@
 {
     "name": "tshafer/laravel-flash",
     "description": "Flash messages for Laravel 5.",
+    "license": "MIT",
     "require": {
         "php": ">=5.5.9",
         "tshafer/laravel-service-provider": "1.*"
