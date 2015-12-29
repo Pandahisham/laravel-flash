@@ -5,7 +5,7 @@
 First, pull in the package through Composer.
 
 ```php
-composer require tshafer/laravel-flash:1.*
+composer require tshafer/laravel-flash
 ```
 
 And then include the service provider within `app/config/app.php`.
